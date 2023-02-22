@@ -1,0 +1,41 @@
+#
+# Files used for moss purpose.
+# action params file/dirname
+#
+
+[kmom01]
+me/kmom01/lab1/answer.py
+me/kmom01/lab1/classes.py
+me/flask/person.py
+
+[kmom02]
+me/kmom02/lab2/answer.py
+me/kmom02/lab2/classes.py
+me/kmom02/bank/account_manager.py
+me/kmom02/bank/accounts.py
+
+[kmom03]
+me/kmom03/bank2/person.py
+me/kmom03/bank2/tests.py
+me/kmom03/bank2/account_manager.py
+
+[kmom04]
+me/kmom04/queue/queue.py
+me/kmom04/list/unorderedlist.py
+me/kmom04/list/main.py
+me/kmom04/list/test.py
+
+[kmom05]
+me/kmom05/lab3/answer.py
+me/kmom05/sort/sort.py
+# comma separated values for multiple optional names
+me/kmom05/sort/tests.py=test.py,testing.py
+
+[kmom06]
+me/kmom06/tree/bst.py
+
+[kmom10]
+me/kmom10/spellchecker/trie.py
+me/kmom10/spellchecker/spellchecker.py
+me/kmom10/spellchecker/test.py
+me/kmom10/spellchecker/node.py

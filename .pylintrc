@@ -1,0 +1,21 @@
+[MESSAGES CONTROL]
+
+disable=locally-disabled,too-many-instance-attributes,too-few-public-methods,too-many-arguments
+
+
+[FORMAT]
+
+# Maximum number of characters on a single line.
+max-line-length=100
+# Min number of characters in names
+variable-rgx=(([A-Z_][A-Z0-9_]{0,30})|[a-z_][a-z0-9_]{0,30})$
+argument-rgx=[a-z_][a-z0-9_]{0,30}$
+attr-rgx=[a-z_][a-z0-9_]{0,30}$
+const-rgx=(([A-Z_][A-Z0-9_]{0,30})|([a-z_][a-z0-9_]{0,30})|(__.*__))$
+include-naming-hint=true
+# Max number of arguments
+max-args=6
+
+[REPORTS]
+
+#reports=no

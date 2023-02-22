@@ -1,0 +1,155 @@
+#
+# Inspect, tools to inspect a kmom.
+#
+# Usage: dbwebb inspect kmom01
+#
+# Sequence executed:
+# oopython(), oopythonkmom01(), oopythonlast()
+#
+
+
+
+#
+# Test oopython general, always executed first
+#
+oopython()
+{
+    inspectIntro
+}
+
+
+
+#
+# Test general, always executed last in sequence
+#
+oopythonlast()
+{
+    inspectMe "me/flask" "app.cgi" "" "" "flask"
+}
+
+
+
+#
+# Test oopython kmom01
+#
+oopythonkmom01()
+{
+    inspectLab "uppgift/python-med-objekt-och-klasser" "lab1" "answer.py" "python3 answer.py"
+    viewFileContent "classes.py" "me/$KMOM/lab1"
+
+    inspectExerciseHeader "Skapa en me-sida med Python och Flask" "uppgift/en-me-sida-med-flask" "flask"
+    viewFileContent "app.py" "me/flask"
+    viewFileContent "person.py" "me/flask"
+}
+
+
+
+#
+# Test oopython kmom02
+#
+oopythonkmom02()
+{
+    inspectLab "uppgift/python-med-klass-relationer" "lab2" "answer.py" "python3 answer.py"
+
+    inspectExerciseHeader "Bank med Flask" "uppgift/bank_med_flask" "$KMOM/bank"
+    viewFileContent "app.py" "me/$KMOM/bank"
+    viewFileContent "account_manager.py" "me/$KMOM/bank"
+    viewFileContent "accounts.py" "me/$KMOM/bank"
+}
+
+
+
+#
+# Test oopython kmom03
+#
+oopythonkmom03()
+{
+
+    inspectExerciseHeader "Bank del 2" "uppgift/bank_med_flask_del_tva" "$KMOM/bank2"
+    inspectCommand "tests.py" "$EXEC_DIR/$KMOM/bank2" "python3 tests.py -v"
+    viewFileContent "tests.py" "me/$KMOM/bank2"
+    viewFileContent "person.py" "me/$KMOM/bank2"
+
+    inspectExerciseHeader "Skapa ett UML Diagram" "uppgift/skapa_ett_uml_diagram" "$KMOM/war"
+    fileIsReadable "me/kmom03/war/uml.png"
+    printUrl "uml.png" "me/kmom03/war"
+}
+
+
+
+#
+# Test oopython kmom04
+#
+oopythonkmom04()
+{
+
+    inspectExerciseHeader "Queue" "uppgift/skapa-queue" "$KMOM/queue"
+    inspectCommand "tests.py" "$EXEC_DIR/$KMOM/queue" "python3 tests.py -v"
+    viewFileContent "tests.py" "me/$KMOM/queue"
+    viewFileContent "queue.py" "me/$KMOM/queue"
+
+    # fileIsReadable "me/kmom04/queue/sekvens.png"
+    # printUrl "sekvens.png" "me/kmom04/queue"
+    # fileIsReadable "me/kmom04/queue/klass.png"
+    # printUrl "klass.png" "me/kmom04/queue"
+
+
+    inspectExerciseHeader "Unordered List" "uppgift/skapa-lista" "$KMOM/list"
+    inspectCommand "main.py" "$EXEC_DIR/$KMOM/list" "python3 main.py"
+    viewFileContent "errors.py" "me/$KMOM/list"
+    viewFileContent "unorderedlist.py" "me/$KMOM/list"
+    inspectCommand "test.py" "$EXEC_DIR/$KMOM/list" "python3 test.py -v"
+    viewFileContent "test.py" "me/$KMOM/list"
+
+}
+
+
+#
+# Test oopython kmom05
+#
+oopythonkmom05()
+{
+    inspectLab "uppgift/python-med-rekursiva-funktioner" "lab3" "answer.py" "python3 answer.py"
+
+    inspectExerciseHeader "sort" "uppgift/sortering-av-egen-lista" "$KMOM/sort"
+    inspectCommand "test.py" "$EXEC_DIR/$KMOM/sort" "python3 test.py -v"
+    inspectCommand "main.py" "$EXEC_DIR/$KMOM/sort" "python3 main.py"
+    viewFileContent "unorderedlist.py" "me/$KMOM/sort"
+    viewFileContent "main.py" "me/$KMOM/sort"
+    viewFileContent "test.py" "me/$KMOM/sort"
+    viewFileContent "sort.py" "me/$KMOM/sort"
+}
+
+
+
+#
+# Test oopython kmom06
+#
+oopythonkmom06()
+{
+    inspectLab "uppgift/python-med-dictionaries-i-oopython" "lab4" "answer.py" "python3 answer.py"
+
+    inspectExerciseHeader "Binary Search Tree" "uppgift/binary-search-tree" "$KMOM/tree"
+    inspectCommand "test.py" "$EXEC_DIR/$KMOM/tree" "python3 test.py"
+    viewFileContent "test.py" "me/$KMOM/tree"
+    viewFileContent "node.py" "me/$KMOM/tree"
+    viewFileContent "bst.py" "me/$KMOM/tree"
+}
+
+
+
+#
+# Test oopython kmom10
+#
+oopythonkmom10()
+{
+    inspectExerciseHeader "Spellchecker" "kurser/oopython-v2/kmom10" "$KMOM/spellchecker"
+    inspectCommand "spellchecker.py" "$EXEC_DIR/$KMOM/spellchecker" "python3 spellchecker.py"
+    viewFileContent "spellchecker.py" "me/$KMOM/spellchecker"
+    viewFileContent "trie.py" "me/$KMOM/spellchecker"
+    viewFileContent "node.py" "me/$KMOM/spellchecker"
+    inspectCommand "test.py" "$EXEC_DIR/$KMOM/spellchecker" "python3 test.py -v"
+    viewFileContent "test.py" "me/$KMOM/spellchecker"
+    
+    printUrl "classdiagrams.png" "me/kmom10/spellchecker"
+}

@@ -1,0 +1,205 @@
+# --------------------------------------------------------------------------
+#
+# Init
+#
+dbwebb init-me
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom01
+#
+
+#
+# Kom igång med flask https://dbwebb.se/kunskap/flask-med-jinja2
+#
+touch me/kmom01/my_app/app.py
+
+#
+# lab1 http://dbwebb.se/uppgift/python-med-objekt-och-klasser
+#
+dbwebb recreate lab1
+cd me/kmom01/lab1 && ./answer.py; [[ $? = 42 ]]
+dbwebb validate lab1
+
+
+
+#
+# guide http://dbwebb.se/guide/kom-igang-med-objektorienterad-programmering-i-python
+#
+test -d me/kmom01/classes
+
+
+
+#
+# flask http://dbwebb.se/uppgift/en-me-sida-med-flask
+#
+test -d me/flask
+touch me/flask/app.py
+touch me/flask/app.cgi
+dbwebb validate flask
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom02
+#
+
+#
+# lab2 http://dbwebb.se/python-med-mer-objekt-och-klasser
+#
+dbwebb recreate lab2
+cd me/kmom02/lab2 && ./answer.py; [[ $? = 42 ]]
+dbwebb validate lab2
+
+
+
+#
+# Bank http://dbwebb.se/uppgift/bank_med_flask
+#
+cp -ri example/flask/bank me/kmom02/
+cd me/kmom02/bank
+test -f me/kmom02/bank/app.py
+dbwebb validate bank
+
+
+
+#
+# lab2 http://dbwebb.se/kunskap/klass-relationer
+#
+test -d me/kmom02/relations
+
+
+
+#
+# get_post http://dbwebb.se/kunskap/flask-get-post
+#
+test -d me/kmom02/get_post
+
+
+
+#
+# flask http://dbwebb.se/oopython/kmom02
+#
+test -d me/flask
+dbwebb validate flask
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom03
+#
+
+#
+# Bank2 http://dbwebb.se/uppgift/bank_med_flask_del_tva
+#
+cp -ri example/flask/bank2 me/kmom02/
+cd me/kmom02/bank2
+test -f me/kmom02/bank2/app.py
+dbwebb validate bank2
+
+#
+# uml https://dbwebb.se/uppgift/skapa_ett_uml_diagram
+#
+test -d me/kmom03/war
+cd me/kmom03/war/ && touch uml.png && test -e uml.png
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom04
+#
+
+
+
+#
+# Queue http://dbwebb.se/uppgift/skapa-queue
+#
+test -d me/kmom04/queue && cd me/kmom04/queue && touch node.py main.py queue.py
+dbwebb validate queue
+
+
+
+#
+# List http://dbwebb.se/uppgift/skapa-lista
+#
+test -d me/kmom04/list && cd me/kmom04/list && touch node.py main.py unorderedlist.py test.py
+dbwebb validate list
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom05
+#
+
+
+
+#
+# lab3 http://dbwebb.se/uppgift/python-med-rekursiva-funktioner
+#
+dbwebb recreate lab3
+cd me/kmom05/lab3 && ./answer.py; [[ $? = 42 ]]
+dbwebb validate lab3
+
+
+
+#
+# sort http://dbwebb.se/uppgift/sortering-av-egen-lista
+#
+cd me/ && cp -i kmom04/list/*.py kmom05/sort/
+test -e me/kmom05/sort/main.py && test -e me/kmom05/sort/unorderedlist.py && test -e me/kmom05/sort/test.py
+touch me/kmom05/sort/sort.py && test -e me/kmom05/sort/sort.py
+dbwebb validate sort
+
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom06
+#
+
+
+#
+# lab4 https://dbwebb.se/uppgift/python-med-dictionaries-i-oopython
+#
+dbwebb recreate lab4
+cd me/kmom06/lab4 && ./answer.py; [[ $? = 42 ]]
+dbwebb validate lab4
+
+
+
+# binary search tree http://dbwebb.se/uppgift/binary-search-tree
+#
+test -d me/kmom06/tree
+cp example/tree/*.py me/kmom06/tree
+test -e me/kmom06/tree/test.py && test -e me/kmom06/tree/utils.py
+dbwebb validate tree
+
+test -d me/flask
+dbwebb validate flask
+
+
+
+# --------------------------------------------------------------------------
+#
+# Kmom10
+#
+
+
+
+# spellchecker http://dbwebb.se/oopython/kmom10
+#
+test -d me/kmom10/spellchecker
+cp example/dictionary/*.txt me/kmom10/spellchecker
+test -e me/kmom10/spellchecker/dictionary.txt
+cd me/kmom10/spellchecker && touch spellchecker.py trie.py node.py test.py classdiagrams.png
+dbwebb validate spellchecker
+
+test -d me/flask
+dbwebb validate flask

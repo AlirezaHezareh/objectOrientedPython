@@ -1,0 +1,55 @@
+#
+# This file has two meanings.
+# First create these directories on dbwebb init-me in the me-dir.
+# Map item to dirname while doing, for example, dbwebb validate lab1
+#
+
+# kmom01
+me/kmom01/lab1
+me/kmom01/classes
+
+# kmom02
+me/kmom02/my_app
+me/kmom02/yahtzee1
+me/kmom02/unittest
+
+# kmom03
+me/kmom03/lab2
+me/kmom03/relations
+me/kmom03/get_post
+me/kmom03/yahtzee2
+
+# kmom04
+me/kmom04/uml
+me/kmom04/unittest
+me/kmom04/classes
+me/kmom04/yahtzee3
+
+# kmom05
+me/kmom05/structures
+me/kmom05/queue
+me/kmom05/list
+
+# kmom06
+me/kmom06/algorithms
+me/kmom06/lab3
+me/kmom06/sort
+
+# kmom07
+me/kmom07/tree
+me/kmom07/lab4
+
+# kmom10
+me/kmom10/spellchecker
+
+# --------------------------------------------------------------------------
+#
+# Inspect
+#
+#make dbwebb-inspect options="--yes --no-validate" what=kmom01
+#make dbwebb-inspect options="--yes --no-validate" what=kmom02
+#make dbwebb-inspect options="--yes --no-validate" what=kmom03
+#make dbwebb-inspect options="--yes --no-validate" what=kmom04
+#make dbwebb-inspect options="--yes --no-validate" what=kmom05
+#make dbwebb-inspect options="--yes --no-validate" what=kmom06
+#make dbwebb-inspect options="--yes --no-validate" what=kmom10

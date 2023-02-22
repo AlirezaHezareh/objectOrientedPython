@@ -1,0 +1,74 @@
+[32;01m>>> -------------- Start                -------------------------[0m
+[alhz22] lab1 Mon Feb  6 02:43:21 PM CET 2023 
+[32;01m>>> -------------- scripts.d/validate.d.bash -------------------------[0m
+scripts.d/validate.d.bash start
+
+Validation: "dbwebb validate lab1":
+Uploading the directory '/home/bth/dbwebb-kurser/oopython/' to 'alhz22@ssh.student.bth.se:dbwebb-kurser/oopython/' for validation.
+sending incremental file list
+me/kmom02/unittest/
+me/kmom02/unittest/test.py
+me/kmom02/unittest/src/
+me/kmom02/unittest/src/__init__.py
+me/kmom02/unittest/src/car.py
+me/kmom02/unittest/tests/
+me/kmom02/unittest/tests/__init__.py
+me/kmom02/unittest/tests/test_car.py
+
+sent 78,226 bytes  received 583 bytes  52,539.33 bytes/sec
+total size is 14,294,151  speedup is 181.38
+Validating '/home/saxon/students/20222/alhz22/dbwebb-kurser/oopython/me/kmom01/lab1'.
+ *.html using htmlhint. (1)
+ *.scss using stylelint (0)
+ *.json using jsonlint. (1)
+ *.py using pylint
+
+[43mWARNING[0m pylint failed: './me/kmom01/lab1/answer.py'
+PYLINTHOME is now '/home/saxon/students/20222/alhz22/.cache/pylint' but obsolescent '/home/saxon/students/20222/alhz22/.pylint.d' is found; you can safely remove the latter
+
+... (3)
+ *.cgi using pylint (0)
+ *. using file..... (5)
+ *. using file..... (5)
+
+[0;37;41mFAILED[0m Asserts: 15 Faults: 1
+
+[0;37;41mFAILED[0m to validate course results.
+Saved a log of the output: less -R '/home/bth/.dbwebb-validate.log'
+
+scripts.d/validate.d.bash end
+===========================================================
+[0;37;41mFAILED[0m scripts.d/validate.d.bash
+[32;01m>>> -------------- scripts.d/lab.d.bash -------------------------[0m
+scripts.d/lab.d.bash start
+
+Executing me/kmom01/lab1/answer.py ...
+>>>  Ready to begin.
+>>>  1.1 CORRECT. Well done!
+>>>  1.2 CORRECT. Well done!
+>>>  1.3 CORRECT. Well done!
+>>>  1.4 CORRECT. Well done!
+>>>  1.5 CORRECT. Well done!
+>>>  1.6 CORRECT. Well done!
+>>>  1.7 CORRECT. Well done!
+>>>  1.8 CORRECT. Well done!
+>>>  2.1 CORRECT. Well done!
+>>>  2.2 CORRECT. Well done!
+>>>  3.1 CORRECT. Well done!
+>>>  Done with status 11/11/0/0 (Total/Correct/Failed/Not done).
+>>>  Points earned: 13p of 13p (PASS=>10.0p PASS W DISTINCTION=>13.0p).
+[96m>>> Grade: PASS WITH DISTINCTION!!! :-D[0m
+
+Link to lab: https://lab.dbwebb.se/?course=oopython&lab=lab1&version=v2&acronym=alhz22&doGenerate=Submit
+scripts.d/lab.d.bash end
+===========================================================
+[0;30;42mOK[0m scripts.d/lab.d.bash
+[32;01m>>> -------------- Test summary         -------------------------[0m
+
+
+[32;01m>>> -------------- Test summary         -------------------------[0m
+[0;37;41mFAILED[0m scripts.d/validate.d.bash
+[0;30;42mOK[0m scripts.d/lab.d.bash
+
+ --------------------------------------------
+Saved a log of the test output: less -R '/home/bth/dbwebb-kurser/oopython/.log/test/lab1'
