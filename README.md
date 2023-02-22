@@ -32,6 +32,6 @@ Feel free to help building up the repository with more content suited for traini
 
 ```                                                            
  .                                                             
-..:  Copyright (c) 2015-2017 Mikael Roos et al, mos@dbwebb.se   
+..:  Copyright (c) 2022-2222 Alireza Hezareh , hezareh22@gmail.com   
 ```                                                            
 # objectOrientedPython
